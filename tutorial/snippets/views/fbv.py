@@ -18,6 +18,11 @@ config/urls.py에 snippets.urls를 include
     /snippets/에 연결되도록 구
 '''
 
+__all__ =(
+    'snippet_list',
+    'snippet_detail',
+)
+
 # CSRF 인증을 사용하지 않음
 #@csrf_exempt
 

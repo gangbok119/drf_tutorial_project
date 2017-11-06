@@ -1,5 +1,6 @@
-from . import *
+from .fbv import *
 
 __all__ = (
-    'fbv',
+    'snippet_list',
+    'snippet_detail',
 )
