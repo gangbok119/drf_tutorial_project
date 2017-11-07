@@ -16,12 +16,13 @@ Including another URLconf
 from django.conf.urls import url, include
 
 
-from . import fbv, cbv, gbv,cbv_mixins
+from . import fbv, cbv, gbv,cbv_mixins,cbv_viewsets_router
 
 urlpatterns = [
     url(r'^fbv/', include(fbv, namespace='fbv')),
     url(r'^cbv/', include(cbv, namespace='cbv')),
     url(r'^gbv/', include(gbv, namespace='gbv')),
     url(r'^cbv-mixins/', include(cbv_mixins, namespace='cbv_mixins')),
+    url(r'^cbv_viewsets-router/',include(cbv_viewsets_router,namespace='cbv_viewsets_router'))
 
 ]

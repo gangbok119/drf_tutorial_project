@@ -5,11 +5,12 @@ from .models import Snippet
 
 
 class SnippetSerializer(serializers.ModelSerializer):
+    owner = serializers.ReadOnlyField(
+        source='owner.username',
+    )
+
     class Meta:
         model = Snippet
-        owner = serializers.ReadOnlyField(
-            source='owner.username',
-        )
         fields = (
             'id',
             'title',
