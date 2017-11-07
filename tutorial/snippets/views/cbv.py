@@ -22,7 +22,6 @@ class SnippetList(APIView):
 
 
 class SnippetDetail(APIView):
-
     def get_object(self, pk):
         try:
             return Snippet.objects.get(pk=pk)
